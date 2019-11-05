@@ -3962,7 +3962,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Calculadora.c: 102: LCD_Clear();
 "102
 [e ( _LCD_Clear ..  ]
-[; ;Calculadora.c: 103: LCD_String("MATH ERROR");
+[; ;Calculadora.c: 103: LCD_String("ERROR");
 "103
 [e ( _LCD_String (1 :s 3C ]
 "104
@@ -4105,6 +4105,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 386 ]
 }
 [a 1C 67 97 108 99 117 108 97 100 111 114 97 0 ]
-[a 3C 77 65 84 72 32 69 82 82 79 82 0 ]
+[a 3C 69 82 82 79 82 0 ]
 [a 2C 43 44 45 44 42 44 47 0 ]
 [a 4C 46 0 ]

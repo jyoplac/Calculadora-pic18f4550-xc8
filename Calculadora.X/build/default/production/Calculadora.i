@@ -5858,7 +5858,7 @@ if(number2==0)
 {
 
 LCD_Clear();
-LCD_String("MATH ERROR");
+LCD_String("ERROR");
 }
 else
 {

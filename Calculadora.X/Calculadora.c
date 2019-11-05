@@ -100,7 +100,7 @@ int main()
                         {  
                             
                             LCD_Clear();
-                            LCD_String("MATH ERROR");
+                            LCD_String("ERROR");
                         }
                         else
                         {   

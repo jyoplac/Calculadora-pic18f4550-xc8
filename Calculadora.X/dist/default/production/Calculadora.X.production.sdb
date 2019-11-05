@@ -53,11 +53,11 @@
 [v ___omul __omul `(ul  1 e 4 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"11 C:\Users\jhon_\MPLABXProjects\Calculadora.X\Calculadora.c
+"11 C:\Users\jhon_\Documents\GitHub\Calculadora-pic18f4550-xc8\Calculadora.X\Calculadora.c
 [v _main main `(i  1 e 2 0 ]
 "138
 [v _display_float display_float `(v  1 e 1 0 ]
-"4 C:\Users\jhon_\MPLABXProjects\Calculadora.X\lcd.c
+"4 C:\Users\jhon_\Documents\GitHub\Calculadora-pic18f4550-xc8\Calculadora.X\lcd.c
 [v _LCD_Init LCD_Init `(v  1 e 1 0 ]
 "17
 [v _LCD_Command LCD_Command `(v  1 e 1 0 ]
@@ -71,7 +71,7 @@
 [v _LCD_Clear LCD_Clear `(v  1 e 1 0 ]
 "83
 [v _MSdelay MSdelay `(v  1 e 1 0 ]
-"4 C:\Users\jhon_\MPLABXProjects\Calculadora.X\teclado.c
+"4 C:\Users\jhon_\Documents\GitHub\Calculadora-pic18f4550-xc8\Calculadora.X\teclado.c
 [v _keyfind keyfind `(uc  1 e 1 0 ]
 "2453 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
@@ -91,13 +91,13 @@
 [v _LATD1 LATD1 `VEb  1 e 0 @31841 ]
 "10392
 [v _RBPU RBPU `VEb  1 e 0 @32655 ]
-"12 C:\Users\jhon_\MPLABXProjects\Calculadora.X\teclado.h
+"12 C:\Users\jhon_\Documents\GitHub\Calculadora-pic18f4550-xc8\Calculadora.X\teclado.h
 [v _col_loc col_loc `uc  1 e 1 0 ]
 [v _rowloc rowloc `uc  1 e 1 0 ]
 [v _temp_col temp_col `uc  1 e 1 0 ]
 "14
 [v _keypad keypad `[4][4]uc  1 e 16 0 ]
-"11 C:\Users\jhon_\MPLABXProjects\Calculadora.X\Calculadora.c
+"11 C:\Users\jhon_\Documents\GitHub\Calculadora-pic18f4550-xc8\Calculadora.X\Calculadora.c
 [v _main main `(i  1 e 2 0 ]
 {
 "19
@@ -174,12 +174,12 @@
 [v ___lldiv@divisor divisor `ul  1 p 4 4 ]
 "30
 } 0
-"4 C:\Users\jhon_\MPLABXProjects\Calculadora.X\teclado.c
+"4 C:\Users\jhon_\Documents\GitHub\Calculadora-pic18f4550-xc8\Calculadora.X\teclado.c
 [v _keyfind keyfind `(uc  1 e 1 0 ]
 {
 "118
 } 0
-"138 C:\Users\jhon_\MPLABXProjects\Calculadora.X\Calculadora.c
+"138 C:\Users\jhon_\Documents\GitHub\Calculadora-pic18f4550-xc8\Calculadora.X\Calculadora.c
 [v _display_float display_float `(v  1 e 1 0 ]
 {
 "141
@@ -358,7 +358,7 @@
 [v ___fldiv@a a `d  1 p 4 28 ]
 "185
 } 0
-"59 C:\Users\jhon_\MPLABXProjects\Calculadora.X\lcd.c
+"59 C:\Users\jhon_\Documents\GitHub\Calculadora-pic18f4550-xc8\Calculadora.X\lcd.c
 [v _LCD_String_xy LCD_String_xy `(v  1 e 1 0 ]
 {
 [v LCD_String_xy@row row `uc  1 a 1 wreg ]
