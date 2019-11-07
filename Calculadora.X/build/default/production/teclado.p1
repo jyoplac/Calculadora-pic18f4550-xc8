@@ -3530,10 +3530,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _col_loc `uc ~T0 @X0 1 e ]
 [v _rowloc `uc ~T0 @X0 1 e ]
 [v _temp_col `uc ~T0 @X0 1 e ]
-[; ;teclado.h: 12: unsigned char col_loc,rowloc,temp_col;
-[v F3039 `uc ~T0 @X0 -> 4 `i t ]
+[v _lim `uc ~T0 @X0 1 e ]
+[; ;teclado.h: 12: unsigned char col_loc,rowloc,temp_col,lim;
+[v F3040 `uc ~T0 @X0 -> 4 `i t ]
 "14
-[v _keypad `F3039 ~T0 @X0 -> 4 `i e ]
+[v _keypad `F3040 ~T0 @X0 -> 4 `i e ]
 [i _keypad
 :U ..
 :U ..
@@ -3836,91 +3837,109 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;teclado.c: 92: {
 "92
 {
-[; ;teclado.c: 93: LCD_Char(keypad[rowloc][0]);
-"93
+[; ;teclado.c: 95: if(lim==0)LCD_Char(keypad[rowloc][0]);
+"95
+[e $ ! == -> _lim `i -> 0 `i 398  ]
 [e ( _LCD_Char (1 *U + &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux `ui `ux ]
-[; ;teclado.c: 94: return keypad[rowloc][0];
-"94
+[e :U 398 ]
+[; ;teclado.c: 97: if(rowloc==3) lim=0;
+"97
+[e $ ! == -> _rowloc `i -> 3 `i 399  ]
+[e = _lim -> -> 0 `i `uc ]
+[e :U 399 ]
+[; ;teclado.c: 99: return keypad[rowloc][0];
+"99
 [e ) *U + &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux `ui `ux ]
 [e $UE 362  ]
-"95
-}
-[; ;teclado.c: 95: }
-[e $U 398  ]
-"96
-[e :U 397 ]
-[; ;teclado.c: 96: else
-[; ;teclado.c: 97: if(col_loc==0xd0)
-"97
-[e $ ! == -> _col_loc `i -> 208 `i 399  ]
-[; ;teclado.c: 98: {
-"98
-{
-[; ;teclado.c: 99: LCD_Char(keypad[rowloc][1]);
-"99
-[e ( _LCD_Char (1 *U + &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux `ui `ux ]
-[; ;teclado.c: 100: return keypad[rowloc][1];
 "100
+}
+[; ;teclado.c: 100: }
+[e $U 400  ]
+"101
+[e :U 397 ]
+[; ;teclado.c: 101: else
+[; ;teclado.c: 102: if(col_loc==0xd0)
+"102
+[e $ ! == -> _col_loc `i -> 208 `i 401  ]
+[; ;teclado.c: 103: {
+"103
+{
+[; ;teclado.c: 104: if(lim==0)LCD_Char(keypad[rowloc][1]);
+"104
+[e $ ! == -> _lim `i -> 0 `i 402  ]
+[e ( _LCD_Char (1 *U + &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux `ui `ux ]
+[e :U 402 ]
+[; ;teclado.c: 105: return keypad[rowloc][1];
+"105
 [e ) *U + &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux * -> -> -> 1 `i `ui `ux -> -> # *U &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux `ui `ux ]
 [e $UE 362  ]
-"101
-}
-[; ;teclado.c: 101: }
-[e $U 400  ]
-"102
-[e :U 399 ]
-[; ;teclado.c: 102: else
-[; ;teclado.c: 103: if(col_loc==0xb0)
-"103
-[e $ ! == -> _col_loc `i -> 176 `i 401  ]
-[; ;teclado.c: 104: {
-"104
-{
-[; ;teclado.c: 105: LCD_Char(keypad[rowloc][2]);
-"105
-[e ( _LCD_Char (1 *U + &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux `ui `ux ]
-[; ;teclado.c: 106: return keypad[rowloc][2];
 "106
+}
+[; ;teclado.c: 106: }
+[e $U 403  ]
+"107
+[e :U 401 ]
+[; ;teclado.c: 107: else
+[; ;teclado.c: 108: if(col_loc==0xb0)
+"108
+[e $ ! == -> _col_loc `i -> 176 `i 404  ]
+[; ;teclado.c: 109: {
+"109
+{
+[; ;teclado.c: 111: if(rowloc==3) lim=1;
+"111
+[e $ ! == -> _rowloc `i -> 3 `i 405  ]
+[e = _lim -> -> 1 `i `uc ]
+[e :U 405 ]
+[; ;teclado.c: 113: if(lim==0)LCD_Char(keypad[rowloc][2]);
+"113
+[e $ ! == -> _lim `i -> 0 `i 406  ]
+[e ( _LCD_Char (1 *U + &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux `ui `ux ]
+[e :U 406 ]
+[; ;teclado.c: 114: return keypad[rowloc][2];
+"114
 [e ) *U + &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux * -> -> -> 2 `i `ui `ux -> -> # *U &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux `ui `ux ]
 [e $UE 362  ]
-"107
+"115
 }
-[; ;teclado.c: 107: }
-[e $U 402  ]
-"108
-[e :U 401 ]
-[; ;teclado.c: 108: else
-[; ;teclado.c: 110: {
-"110
+[; ;teclado.c: 115: }
+[e $U 407  ]
+"116
+[e :U 404 ]
+[; ;teclado.c: 116: else
+[; ;teclado.c: 118: {
+"118
 {
-[; ;teclado.c: 111: LCD_Char(keypad[rowloc][3]);
-"111
+[; ;teclado.c: 119: if(lim==0)LCD_Char(keypad[rowloc][3]);
+"119
+[e $ ! == -> _lim `i -> 0 `i 408  ]
 [e ( _LCD_Char (1 *U + &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux * -> -> -> 3 `i `ui `ux -> -> # *U &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux `ui `ux ]
-[; ;teclado.c: 112: return keypad[rowloc][3];
-"112
+[e :U 408 ]
+[; ;teclado.c: 120: return keypad[rowloc][3];
+"120
 [e ) *U + &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux * -> -> -> 3 `i `ui `ux -> -> # *U &U *U + &U _keypad * -> _rowloc `ux -> * -> # *U &U *U &U _keypad `ui -> -> 4 `i `ui `ux `ui `ux ]
 [e $UE 362  ]
-"113
+"121
 }
-[e :U 402 ]
+[e :U 407 ]
+[e :U 403 ]
 [e :U 400 ]
-[e :U 398 ]
-"114
+"122
 }
 [e :U 394 ]
 "88
 [e $U 395  ]
 [e :U 396 ]
-[; ;teclado.c: 113: }
-[; ;teclado.c: 114: }
-[; ;teclado.c: 116: MSdelay(300);
-"116
+[; ;teclado.c: 121: }
+[; ;teclado.c: 122: }
+[; ;teclado.c: 124: MSdelay(300);
+"124
 [e ( _MSdelay (1 -> -> 300 `i `ui ]
-[; ;teclado.c: 117: return 0;
-"117
+[; ;teclado.c: 125: return 0;
+"125
 [e ) -> -> 0 `i `uc ]
 [e $UE 362  ]
-[; ;teclado.c: 118: }
-"118
+[; ;teclado.c: 126: }
+"126
 [e :UE 362 ]
 }

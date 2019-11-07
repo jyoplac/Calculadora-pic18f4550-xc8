@@ -9,7 +9,7 @@
 #define write_port LATB             /* latch register to write data on port */
 #define read_port PORTB             /* PORT register to read data of port */
 #define Direction_Port TRISB
-unsigned char col_loc,rowloc,temp_col;
+unsigned char col_loc,rowloc,temp_col,lim;
 
 unsigned char keypad[4][4]= {'7','8','9','/',
                              '4','5','6','*',

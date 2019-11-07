@@ -5583,7 +5583,7 @@ void LCD_String_xy(char, char , const char *);
 void LCD_Clear();
 
 # 12 "teclado.h"
-unsigned char col_loc,rowloc,temp_col;
+unsigned char col_loc,rowloc,temp_col,lim;
 
 unsigned char keypad[4][4]= {'7','8','9','/',
 '4','5','6','*',

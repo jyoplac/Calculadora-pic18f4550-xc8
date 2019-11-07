@@ -5583,7 +5583,7 @@ void LCD_String_xy(char, char , const char *);
 void LCD_Clear();
 
 # 12 "teclado.h"
-unsigned char col_loc,rowloc,temp_col;
+unsigned char col_loc,rowloc,temp_col,lim;
 
 unsigned char keypad[4][4]= {'7','8','9','/',
 '4','5','6','*',
@@ -5681,25 +5681,33 @@ while(1)
 
 if(col_loc==0xe0)
 {
-LCD_Char(keypad[rowloc][0]);
+
+
+if(lim==0)LCD_Char(keypad[rowloc][0]);
+
+if(rowloc==3) lim=0;
+
 return keypad[rowloc][0];
 }
 else
 if(col_loc==0xd0)
 {
-LCD_Char(keypad[rowloc][1]);
+if(lim==0)LCD_Char(keypad[rowloc][1]);
 return keypad[rowloc][1];
 }
 else
 if(col_loc==0xb0)
 {
-LCD_Char(keypad[rowloc][2]);
+
+if(rowloc==3) lim=1;
+
+if(lim==0)LCD_Char(keypad[rowloc][2]);
 return keypad[rowloc][2];
 }
 else
 
 {
-LCD_Char(keypad[rowloc][3]);
+if(lim==0)LCD_Char(keypad[rowloc][3]);
 return keypad[rowloc][3];
 }
 }

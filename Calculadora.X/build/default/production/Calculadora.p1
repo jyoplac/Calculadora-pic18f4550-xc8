@@ -3549,10 +3549,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _col_loc `uc ~T0 @X0 1 e ]
 [v _rowloc `uc ~T0 @X0 1 e ]
 [v _temp_col `uc ~T0 @X0 1 e ]
-[; ;teclado.h: 12: unsigned char col_loc,rowloc,temp_col;
-[v F3039 `uc ~T0 @X0 -> 4 `i t ]
+[v _lim `uc ~T0 @X0 1 e ]
+[; ;teclado.h: 12: unsigned char col_loc,rowloc,temp_col,lim;
+[v F3040 `uc ~T0 @X0 -> 4 `i t ]
 "14
-[v _keypad `F3039 ~T0 @X0 -> 4 `i e ]
+[v _keypad `F3040 ~T0 @X0 -> 4 `i e ]
 [i _keypad
 :U ..
 :U ..
