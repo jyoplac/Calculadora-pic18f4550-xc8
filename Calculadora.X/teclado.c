@@ -5,13 +5,13 @@ unsigned char keyfind()
 {       
     Direction_Port = 0xf0;  /*PORTD.0-PORTD.3 as a Output Port and PORTD.4-PORTD.7 as a Input Port*/
     write_port = 0xf0;      /*Make lower nibble as low(Gnd) and Higher nibble as High(Vcc)*/
-      do
-      {
-        do
-        {
-            col_loc = read_port & 0xf0; /*mask port with f0 and copy it to col_loc variable*/   
-        }while(col_loc!=0xf0);          /*Check initially at the start there is any key pressed*/ 
-        col_loc = read_port & 0xf0;    /*mask port with f0 and copy it to col_loc variable*/  
+      do{
+            do{
+                col_loc = read_port & 0xf0; /*mask port with f0 and copy it to col_loc variable*/   
+            }while(col_loc!=0xf0);          /*Check initially at the start there is any key pressed*/ 
+            
+            col_loc = read_port & 0xf0;    /*mask port with f0 and copy it to col_loc variable*/  
+            
       }while(col_loc!=0xf0);
       
         write_port = 0xf0;              /*Make lower nibble as low(Gnd) and Higher nibble as High(Vcc)*/

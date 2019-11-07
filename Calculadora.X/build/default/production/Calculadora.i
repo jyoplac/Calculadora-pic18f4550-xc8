@@ -5767,6 +5767,7 @@ void display_float(double);
 
 int main()
 {
+
 unsigned int index=0;
 unsigned long number1,number2;
 unsigned long result=0;
@@ -5775,37 +5776,42 @@ unsigned char key_pressed,operator,flag=0;
 unsigned char op1[10],op2[10];
 unsigned char result_output[10];
 
+
+
+
 OSCCON = 0x72;
 RBPU=0;
 LCD_Init();
+
+
 LCD_String_xy(1,0,"Calculadora");
 LCD_String_xy(2,0,"+,-,*,/");
-MSdelay(2000);
+MSdelay(1000);
 LCD_Clear();
 LCD_Command(0x80);
-while(1)
-{
+while(1){
+
+
 key_pressed= keyfind();
 MSdelay(30);
-if(key_pressed!=' ')
-{
+if(key_pressed!=' '){
 
-if(key_pressed!='+' && key_pressed!='-' && key_pressed!='/' && key_pressed!='*' && key_pressed!='=')
-{
-if(flag==0)
-{
+
+
+if(key_pressed!='+' && key_pressed!='-' && key_pressed!='/' && key_pressed!='*' && key_pressed!='='){
+
+if(flag==0){
+
 op1[index] = key_pressed;
 index++;
 }
-else
-{
+else{
 op2[index] = key_pressed;
 index++;
 }
 }
 
-if(key_pressed=='+' || key_pressed=='-' || key_pressed=='*' || key_pressed=='/' )
-{
+if(key_pressed=='+' || key_pressed=='-' || key_pressed=='*' || key_pressed=='/' ){
 
 operator=key_pressed;
 index=0;
@@ -5814,16 +5820,14 @@ flag=1;
 }
 
 
-if(key_pressed=='=')
-{
+if(key_pressed=='='){
+
 number1=atol(op1);
 number2=atol(op2);
 LCD_Command(0xc0);
 
 
-
-switch(operator)
-{
+switch(operator){
 
 case '+':
 
@@ -5831,7 +5835,7 @@ case '+':
 result = number1+number2;
 ltoa(result_output,result,10);
 
-# 77
+# 81
 LCD_String(result_output);
 break;
 
@@ -5854,14 +5858,12 @@ break;
 
 case '/':
 
-if(number2==0)
-{
+if(number2==0){
 
 LCD_Clear();
 LCD_String("ERROR");
 }
-else
-{
+else{
 
 div_result = (float)number1/(float)number2;
 
@@ -5874,20 +5876,26 @@ break;
 default :
 
 break;
-
-}
 }
 
+
+
+
 }
-else
-{
+
+
+}
+else{
+
 LCD_Clear();
 MSdelay(10);
+
 memset(op1,0,10);
 memset(op2,0,10);
 memset(result_output,0,10);
 break;
 }
+
 MSdelay(1);
 }
 return 0;
@@ -5902,6 +5910,16 @@ temp=100*temp;
 itoa(output,(int)div_result,10);
 LCD_String(output);
 LCD_String(".");
+itoa(output1,(int)temp,10);
+LCD_String(output1);
+
+temp= temp - ((int)temp);
+temp=100*temp;
+itoa(output1,(int)temp,10);
+LCD_String(output1);
+
+temp= temp - ((int)temp);
+temp=100*temp;
 itoa(output1,(int)temp,10);
 LCD_String(output1);
 }

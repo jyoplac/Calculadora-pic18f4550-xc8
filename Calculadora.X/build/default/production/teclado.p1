@@ -3584,28 +3584,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;teclado.c: 7: LATB = 0xf0;
 "7
 [e = _LATB -> -> 240 `i `uc ]
-[; ;teclado.c: 8: do
+[; ;teclado.c: 8: do{
 "8
 [e :U 365 ]
-[; ;teclado.c: 9: {
+{
+[; ;teclado.c: 9: do{
 "9
-{
-[; ;teclado.c: 10: do
-"10
 [e :U 368 ]
-[; ;teclado.c: 11: {
-"11
 {
-[; ;teclado.c: 12: col_loc = PORTB & 0xf0;
-"12
+[; ;teclado.c: 10: col_loc = PORTB & 0xf0;
+"10
 [e = _col_loc -> & -> _PORTB `i -> 240 `i `uc ]
-"13
+"11
 }
-[; ;teclado.c: 13: }while(col_loc!=0xf0);
+[; ;teclado.c: 11: }while(col_loc!=0xf0);
 [e $ != -> _col_loc `i -> 240 `i 368  ]
 [e :U 367 ]
-[; ;teclado.c: 14: col_loc = PORTB & 0xf0;
-"14
+[; ;teclado.c: 13: col_loc = PORTB & 0xf0;
+"13
 [e = _col_loc -> & -> _PORTB `i -> 240 `i `uc ]
 "15
 }

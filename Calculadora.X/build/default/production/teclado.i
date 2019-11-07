@@ -5596,13 +5596,13 @@ unsigned char keyfind()
 {
 TRISB = 0xf0;
 LATB = 0xf0;
-do
-{
-do
-{
+do{
+do{
 col_loc = PORTB & 0xf0;
 }while(col_loc!=0xf0);
+
 col_loc = PORTB & 0xf0;
+
 }while(col_loc!=0xf0);
 
 LATB = 0xf0;
