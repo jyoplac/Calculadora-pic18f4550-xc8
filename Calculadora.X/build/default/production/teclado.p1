@@ -3538,38 +3538,38 @@ Version 3.2 HI-TECH Software Intermediate Code
 [i _keypad
 :U ..
 :U ..
--> -> 55 `ui `uc
--> -> 56 `ui `uc
--> -> 57 `ui `uc
--> -> 47 `ui `uc
+-> -> 49 `ui `uc
+-> -> 50 `ui `uc
+-> -> 51 `ui `uc
+-> -> 43 `ui `uc
 ..
 :U ..
 "15
 -> -> 52 `ui `uc
 -> -> 53 `ui `uc
 -> -> 54 `ui `uc
--> -> 42 `ui `uc
+-> -> 45 `ui `uc
 ..
 :U ..
 "16
--> -> 49 `ui `uc
--> -> 50 `ui `uc
--> -> 51 `ui `uc
--> -> 45 `ui `uc
+-> -> 55 `ui `uc
+-> -> 56 `ui `uc
+-> -> 57 `ui `uc
+-> -> 42 `ui `uc
 ..
 :U ..
 "17
 -> -> 32 `ui `uc
 -> -> 48 `ui `uc
 -> -> 61 `ui `uc
--> -> 43 `ui `uc
+-> -> 47 `ui `uc
 ..
 ..
 ]
-[; ;teclado.h: 14: unsigned char keypad[4][4]= {'7','8','9','/',
-[; ;teclado.h: 15: '4','5','6','*',
-[; ;teclado.h: 16: '1','2','3','-',
-[; ;teclado.h: 17: ' ','0','=','+'};
+[; ;teclado.h: 14: unsigned char keypad[4][4]= {'1','2','3','+',
+[; ;teclado.h: 15: '4','5','6','-',
+[; ;teclado.h: 16: '7','8','9','*',
+[; ;teclado.h: 17: ' ','0','=','/'};
 [; ;teclado.h: 18: unsigned char keyfind();
 "4 teclado.c
 [v _keyfind `(uc ~T0 @X0 1 ef ]

@@ -5585,10 +5585,10 @@ void LCD_Clear();
 # 12 "teclado.h"
 unsigned char col_loc,rowloc,temp_col,lim;
 
-unsigned char keypad[4][4]= {'7','8','9','/',
-'4','5','6','*',
-'1','2','3','-',
-' ','0','=','+'};
+unsigned char keypad[4][4]= {'1','2','3','+',
+'4','5','6','-',
+'7','8','9','*',
+' ','0','=','/'};
 unsigned char keyfind();
 
 
@@ -5906,7 +5906,7 @@ void display_float(double div_result)
 float temp;
 unsigned char output[15],output1[15];
 temp=div_result - ((int)div_result);
-temp=100*temp;
+temp=10*temp;
 itoa(output,(int)div_result,10);
 LCD_String(output);
 LCD_String(".");
@@ -5914,12 +5914,22 @@ itoa(output1,(int)temp,10);
 LCD_String(output1);
 
 temp= temp - ((int)temp);
-temp=100*temp;
+temp=10*temp;
 itoa(output1,(int)temp,10);
 LCD_String(output1);
 
 temp= temp - ((int)temp);
-temp=100*temp;
+temp=10*temp;
+itoa(output1,(int)temp,10);
+LCD_String(output1);
+
+temp= temp - ((int)temp);
+temp=10*temp;
+itoa(output1,(int)temp,10);
+LCD_String(output1);
+
+temp= temp - ((int)temp);
+temp=10*temp;
 itoa(output1,(int)temp,10);
 LCD_String(output1);
 }

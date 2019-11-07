@@ -3557,38 +3557,38 @@ Version 3.2 HI-TECH Software Intermediate Code
 [i _keypad
 :U ..
 :U ..
--> -> 55 `ui `uc
--> -> 56 `ui `uc
--> -> 57 `ui `uc
--> -> 47 `ui `uc
+-> -> 49 `ui `uc
+-> -> 50 `ui `uc
+-> -> 51 `ui `uc
+-> -> 43 `ui `uc
 ..
 :U ..
 "15
 -> -> 52 `ui `uc
 -> -> 53 `ui `uc
 -> -> 54 `ui `uc
--> -> 42 `ui `uc
+-> -> 45 `ui `uc
 ..
 :U ..
 "16
--> -> 49 `ui `uc
--> -> 50 `ui `uc
--> -> 51 `ui `uc
--> -> 45 `ui `uc
+-> -> 55 `ui `uc
+-> -> 56 `ui `uc
+-> -> 57 `ui `uc
+-> -> 42 `ui `uc
 ..
 :U ..
 "17
 -> -> 32 `ui `uc
 -> -> 48 `ui `uc
 -> -> 61 `ui `uc
--> -> 43 `ui `uc
+-> -> 47 `ui `uc
 ..
 ..
 ]
-[; ;teclado.h: 14: unsigned char keypad[4][4]= {'7','8','9','/',
-[; ;teclado.h: 15: '4','5','6','*',
-[; ;teclado.h: 16: '1','2','3','-',
-[; ;teclado.h: 17: ' ','0','=','+'};
+[; ;teclado.h: 14: unsigned char keypad[4][4]= {'1','2','3','+',
+[; ;teclado.h: 15: '4','5','6','-',
+[; ;teclado.h: 16: '7','8','9','*',
+[; ;teclado.h: 17: ' ','0','=','/'};
 [; ;teclado.h: 18: unsigned char keyfind();
 "7 config.h
 [p x PLLDIV=1 ]
@@ -4061,9 +4061,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Calculadora.c: 150: temp=div_result - ((int)div_result);
 "150
 [e = _temp -> - _div_result -> -> _div_result `i `d `f ]
-[; ;Calculadora.c: 151: temp=100*temp;
+[; ;Calculadora.c: 151: temp=10*temp;
 "151
-[e = _temp * -> -> 100 `i `f _temp ]
+[e = _temp * -> -> 10 `i `f _temp ]
 [; ;Calculadora.c: 152: itoa(output,(int)div_result,10);
 "152
 [e ( _itoa (3 , , &U _output -> _div_result `i -> 10 `i ]
@@ -4082,9 +4082,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Calculadora.c: 158: temp= temp - ((int)temp);
 "158
 [e = _temp - _temp -> -> _temp `i `f ]
-[; ;Calculadora.c: 159: temp=100*temp;
+[; ;Calculadora.c: 159: temp=10*temp;
 "159
-[e = _temp * -> -> 100 `i `f _temp ]
+[e = _temp * -> -> 10 `i `f _temp ]
 [; ;Calculadora.c: 160: itoa(output1,(int)temp,10);
 "160
 [e ( _itoa (3 , , &U _output1 -> _temp `i -> 10 `i ]
@@ -4094,17 +4094,41 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Calculadora.c: 163: temp= temp - ((int)temp);
 "163
 [e = _temp - _temp -> -> _temp `i `f ]
-[; ;Calculadora.c: 164: temp=100*temp;
+[; ;Calculadora.c: 164: temp=10*temp;
 "164
-[e = _temp * -> -> 100 `i `f _temp ]
+[e = _temp * -> -> 10 `i `f _temp ]
 [; ;Calculadora.c: 165: itoa(output1,(int)temp,10);
 "165
 [e ( _itoa (3 , , &U _output1 -> _temp `i -> 10 `i ]
 [; ;Calculadora.c: 166: LCD_String(output1);
 "166
 [e ( _LCD_String (1 -> &U _output1 `*Cuc ]
-[; ;Calculadora.c: 167: }
-"167
+[; ;Calculadora.c: 168: temp= temp - ((int)temp);
+"168
+[e = _temp - _temp -> -> _temp `i `f ]
+[; ;Calculadora.c: 169: temp=10*temp;
+"169
+[e = _temp * -> -> 10 `i `f _temp ]
+[; ;Calculadora.c: 170: itoa(output1,(int)temp,10);
+"170
+[e ( _itoa (3 , , &U _output1 -> _temp `i -> 10 `i ]
+[; ;Calculadora.c: 171: LCD_String(output1);
+"171
+[e ( _LCD_String (1 -> &U _output1 `*Cuc ]
+[; ;Calculadora.c: 173: temp= temp - ((int)temp);
+"173
+[e = _temp - _temp -> -> _temp `i `f ]
+[; ;Calculadora.c: 174: temp=10*temp;
+"174
+[e = _temp * -> -> 10 `i `f _temp ]
+[; ;Calculadora.c: 175: itoa(output1,(int)temp,10);
+"175
+[e ( _itoa (3 , , &U _output1 -> _temp `i -> 10 `i ]
+[; ;Calculadora.c: 176: LCD_String(output1);
+"176
+[e ( _LCD_String (1 -> &U _output1 `*Cuc ]
+[; ;Calculadora.c: 177: }
+"177
 [e :UE 386 ]
 }
 [a 1C 67 97 108 99 117 108 97 100 111 114 97 0 ]

@@ -148,7 +148,7 @@ void display_float(double div_result)
     float temp;
     unsigned char output[15],output1[15];
         temp=div_result - ((int)div_result);    /* get value after decimal point i.e. float value*/
-        temp=100*temp;                          /*convert it into non-decimal value*/
+        temp=10*temp;                          /*convert it into non-decimal value*/
         itoa(output,(int)div_result,10);        /*convert value before deciaml point into ASCII value*/
         LCD_String(output);                      
         LCD_String(".");                         /*Display Decimal point*/
@@ -156,12 +156,22 @@ void display_float(double div_result)
         LCD_String(output1);
         
         temp= temp - ((int)temp);    /* get value after decimal point i.e. float value*/
-        temp=100*temp;
+        temp=10*temp;
         itoa(output1,(int)temp,10);             /*convert value after deciaml point into ASCII value*/
         LCD_String(output1);
         
         temp= temp - ((int)temp);    /* get value after decimal point i.e. float value*/
-        temp=100*temp;
+        temp=10*temp;
+        itoa(output1,(int)temp,10);             /*convert value after deciaml point into ASCII value*/
+        LCD_String(output1);
+        
+        temp= temp - ((int)temp);    /* get value after decimal point i.e. float value*/
+        temp=10*temp;
+        itoa(output1,(int)temp,10);             /*convert value after deciaml point into ASCII value*/
+        LCD_String(output1);
+        
+        temp= temp - ((int)temp);    /* get value after decimal point i.e. float value*/
+        temp=10*temp;
         itoa(output1,(int)temp,10);             /*convert value after deciaml point into ASCII value*/
         LCD_String(output1);
 }

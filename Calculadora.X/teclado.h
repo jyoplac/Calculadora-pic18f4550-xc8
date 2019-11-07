@@ -11,10 +11,10 @@
 #define Direction_Port TRISB
 unsigned char col_loc,rowloc,temp_col,lim;
 
-unsigned char keypad[4][4]= {'7','8','9','/',
-                             '4','5','6','*',
-                             '1','2','3','-',
-                             ' ','0','=','+'};
+unsigned char keypad[4][4]= {'1','2','3','+',
+                             '4','5','6','-',
+                             '7','8','9','*',
+                             ' ','0','=','/'};
 unsigned char keyfind();            /* function to find pressed key*/
 
 #endif	

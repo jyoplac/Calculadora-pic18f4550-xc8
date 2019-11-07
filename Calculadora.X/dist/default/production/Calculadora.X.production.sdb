@@ -190,7 +190,7 @@
 [v display_float@temp temp `f  1 a 4 66 ]
 "146
 [v display_float@div_result div_result `d  1 p 4 32 ]
-"167
+"177
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\itoa.c
 [v _itoa itoa `(*.39uc  1 e 2 0 ]
