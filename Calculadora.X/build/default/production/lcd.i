@@ -5573,7 +5573,7 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 17 "lcd.h"
+# 16 "lcd.h"
 void MSdelay(unsigned int );
 void LCD_Init();
 void LCD_Command(unsigned char );

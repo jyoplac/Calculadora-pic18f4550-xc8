@@ -1,34 +1,36 @@
 
 #include "teclado.h"
 
-unsigned char keyfind()
-{       
+unsigned char keyfind(){
+    
     Direction_Port = 0xf0;  /*PORTD.0-PORTD.3 as a Output Port and PORTD.4-PORTD.7 as a Input Port*/
     write_port = 0xf0;      /*Make lower nibble as low(Gnd) and Higher nibble as High(Vcc)*/
-      do{
-            do{
-                col_loc = read_port & 0xf0; /*mask port with f0 and copy it to col_loc variable*/   
-            }while(col_loc!=0xf0);          /*Check initially at the start there is any key pressed*/ 
+    
+    do{
+          
+        do{
+            col_loc = read_port & 0xf0; /*mask port with f0 and copy it to col_loc variable*/   
+        }while(col_loc!=0xf0);          /*Check initially at the start there is any key pressed*/ 
             
-            col_loc = read_port & 0xf0;    /*mask port with f0 and copy it to col_loc variable*/  
+        col_loc = read_port & 0xf0;    /*mask port with f0 and copy it to col_loc variable*/  
             
-      }while(col_loc!=0xf0);
+    }while(col_loc!=0xf0);
       
-        write_port = 0xf0;              /*Make lower nibble as low(Gnd) and Higher nibble as High(Vcc)*/
-        do
-        { do      
-            {   
-                col_loc = read_port & 0xf0;
-            }while(col_loc==0xf0);      /*Wait for key press*/
-         col_loc = read_port & 0xf0;
-        }while(col_loc==0xf0);          /*Wait for key press*/
+    write_port = 0xf0;              /*Make lower nibble as low(Gnd) and Higher nibble as High(Vcc)*/
+    
+    do{ 
+        do{   
+            col_loc = read_port & 0xf0;
+        }while(col_loc==0xf0);      /*Wait for key press*/
+        col_loc = read_port & 0xf0;
+        
+    }while(col_loc==0xf0);          /*Wait for key press*/
                
-        MSdelay(20);
+    MSdelay(20);
          
         col_loc = read_port & 0xf0;
               
-    while(1)
-    {
+    while(1){
         write_port  = 0xfe;                 /*make Row0(D0) Gnd and keep other row(D1-D3) high*/
         col_loc = read_port & 0xf0;         /*Read Status of PORT for finding Row*/
         temp_col=col_loc;
@@ -85,8 +87,7 @@ unsigned char keyfind()
 
     
     
-    while(1)
-    {
+    while(1){
         
         if(col_loc==0xe0)
         {  
@@ -121,7 +122,7 @@ unsigned char keyfind()
         }    
     }
     
-   MSdelay(300);     
+   MSdelay(200);     
    return 0;
 }
 

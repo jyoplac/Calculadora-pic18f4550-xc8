@@ -55,8 +55,8 @@
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 "11 C:\Users\jhon_\Documents\GitHub\Calculadora-pic18f4550-xc8\Calculadora.X\Calculadora.c
 [v _main main `(i  1 e 2 0 ]
-"146
-[v _display_float display_float `(v  1 e 1 0 ]
+"143
+[v _display_decimales display_decimales `(v  1 e 1 0 ]
 "4 C:\Users\jhon_\Documents\GitHub\Calculadora-pic18f4550-xc8\Calculadora.X\lcd.c
 [v _LCD_Init LCD_Init `(v  1 e 1 0 ]
 "17
@@ -101,25 +101,25 @@
 "11 C:\Users\jhon_\Documents\GitHub\Calculadora-pic18f4550-xc8\Calculadora.X\Calculadora.c
 [v _main main `(i  1 e 2 0 ]
 {
+"21
+[v main@res_lcd res_lcd `[10]uc  1 a 10 20 ]
 "20
-[v main@result_output result_output `[10]uc  1 a 10 20 ]
-"19
 [v main@op2 op2 `[10]uc  1 a 10 10 ]
 [v main@op1 op1 `[10]uc  1 a 10 0 ]
 "15
-[v main@number2 number2 `ul  1 a 4 46 ]
-[v main@number1 number1 `ul  1 a 4 42 ]
+[v main@num2 num2 `ul  1 a 4 46 ]
+[v main@num1 num1 `ul  1 a 4 42 ]
 "16
-[v main@result result `ul  1 a 4 38 ]
+[v main@resultado resultado `ul  1 a 4 38 ]
 "17
-[v main@div_result div_result `d  1 a 4 30 ]
+[v main@div_res div_res `d  1 a 4 30 ]
 "14
-[v main@index index `ui  1 a 2 36 ]
+[v main@n_array n_array `ui  1 a 2 36 ]
 "18
-[v main@key_pressed key_pressed `uc  1 a 1 50 ]
+[v main@tecla tecla `uc  1 a 1 50 ]
 [v main@flag flag `uc  1 a 1 35 ]
-[v main@operator operator `uc  1 a 1 34 ]
-"144
+[v main@operador operador `uc  1 a 1 34 ]
+"141
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\memset.c
 [v _memset memset `(*.39v  1 e 2 0 ]
@@ -178,18 +178,18 @@
 "4 C:\Users\jhon_\Documents\GitHub\Calculadora-pic18f4550-xc8\Calculadora.X\teclado.c
 [v _keyfind keyfind `(uc  1 e 1 0 ]
 {
-"126
+"127
 } 0
-"146 C:\Users\jhon_\Documents\GitHub\Calculadora-pic18f4550-xc8\Calculadora.X\Calculadora.c
-[v _display_float display_float `(v  1 e 1 0 ]
+"143 C:\Users\jhon_\Documents\GitHub\Calculadora-pic18f4550-xc8\Calculadora.X\Calculadora.c
+[v _display_decimales display_decimales `(v  1 e 1 0 ]
 {
-"149
-[v display_float@output1 output1 `[15]uc  1 a 15 51 ]
-[v display_float@output output `[15]uc  1 a 15 36 ]
-"148
-[v display_float@temp temp `f  1 a 4 66 ]
 "146
-[v display_float@div_result div_result `d  1 p 4 32 ]
+[v display_decimales@salida1 salida1 `[15]uc  1 a 15 51 ]
+[v display_decimales@salida salida `[15]uc  1 a 15 36 ]
+"145
+[v display_decimales@temp temp `f  1 a 4 66 ]
+"143
+[v display_decimales@div_res div_res `d  1 p 4 32 ]
 "177
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\itoa.c

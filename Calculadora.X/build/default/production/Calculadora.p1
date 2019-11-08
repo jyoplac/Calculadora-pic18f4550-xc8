@@ -4,26 +4,26 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
 "10392
 [v _RBPU `Vb ~T0 @X0 0 e@32655 ]
-"18 lcd.h
+"17 lcd.h
 [v _LCD_Init `(v ~T0 @X0 0 ef ]
-"22
+"21
 [v _LCD_String_xy `(v ~T0 @X0 0 ef3`uc`uc`*Cuc ]
-"17
+"16
 [v _MSdelay `(v ~T0 @X0 0 ef1`ui ]
-"23
+"22
 [v _LCD_Clear `(v ~T0 @X0 0 ef ]
-"19
-[v _LCD_Command `(v ~T0 @X0 0 ef1`uc ]
 "18 teclado.h
 [v _keyfind `(uc ~T0 @X0 0 ef ]
 "69 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdlib.h
 [v _atol `(l ~T0 @X0 0 ef1`*Cuc ]
-"119
+"18 lcd.h
+[v _LCD_Command `(v ~T0 @X0 0 ef1`uc ]
+"119 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdlib.h
 [v _ltoa `(*uc ~T0 @X0 0 ef3`*uc`l`i ]
-"21 lcd.h
+"20 lcd.h
 [v _LCD_String `(v ~T0 @X0 0 ef1`*Cuc ]
 "9 Calculadora.c
-[v _display_float `(v ~T0 @X0 0 ef1`d ]
+[v _display_decimales `(v ~T0 @X0 0 ef1`d ]
 "16 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\string.h
 [v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
 "113 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdlib.h
@@ -3538,13 +3538,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 187: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 189: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 191: extern __nonreentrant void _delay3(unsigned char);
-[; ;lcd.h: 17: void MSdelay(unsigned int );
-[; ;lcd.h: 18: void LCD_Init();
-[; ;lcd.h: 19: void LCD_Command(unsigned char );
-[; ;lcd.h: 20: void LCD_Char(unsigned char x);
-[; ;lcd.h: 21: void LCD_String(const char *);
-[; ;lcd.h: 22: void LCD_String_xy(char, char , const char *);
-[; ;lcd.h: 23: void LCD_Clear();
+[; ;lcd.h: 16: void MSdelay(unsigned int );
+[; ;lcd.h: 17: void LCD_Init();
+[; ;lcd.h: 18: void LCD_Command(unsigned char );
+[; ;lcd.h: 19: void LCD_Char(unsigned char x);
+[; ;lcd.h: 20: void LCD_String(const char *);
+[; ;lcd.h: 21: void LCD_String_xy(char, char , const char *);
+[; ;lcd.h: 22: void LCD_Clear();
 "12 teclado.h
 [v _col_loc `uc ~T0 @X0 1 e ]
 [v _rowloc `uc ~T0 @X0 1 e ]
@@ -3590,81 +3590,81 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;teclado.h: 16: '7','8','9','*',
 [; ;teclado.h: 17: ' ','0','=','/'};
 [; ;teclado.h: 18: unsigned char keyfind();
-"7 config.h
+"3 config.h
 [p x PLLDIV=1 ]
-"8
+"4
 [p x CPUDIV=OSC1_PLL2 ]
-"9
+"5
 [p x USBDIV=1 ]
-"12
+"8
 [p x FOSC=INTOSC_EC ]
-"13
+"9
 [p x FCMEN=OFF ]
-"14
+"10
 [p x IESO=OFF ]
-"17
+"13
 [p x PWRT=OFF ]
-"18
+"14
 [p x BOR=ON ]
-"19
+"15
 [p x BORV=3 ]
-"20
+"16
 [p x VREGEN=OFF ]
-"23
+"19
 [p x WDT=OFF ]
-"24
+"20
 [p x WDTPS=32768 ]
-"27
+"23
 [p x CCP2MX=ON ]
-"28
+"24
 [p x PBADEN=OFF ]
-"29
+"25
 [p x LPT1OSC=OFF ]
-"30
+"26
 [p x MCLRE=OFF ]
-"33
+"29
 [p x STVREN=ON ]
-"34
+"30
 [p x LVP=OFF ]
-"35
+"31
 [p x ICPRT=OFF ]
-"36
+"32
 [p x XINST=OFF ]
-"39
+"35
 [p x CP0=OFF ]
-"40
+"36
 [p x CP1=OFF ]
-"41
+"37
 [p x CP2=OFF ]
-"42
+"38
 [p x CP3=OFF ]
-"45
+"41
 [p x CPB=OFF ]
-"46
+"42
 [p x CPD=OFF ]
-"49
+"45
 [p x WRT0=OFF ]
-"50
+"46
 [p x WRT1=OFF ]
-"51
+"47
 [p x WRT2=OFF ]
-"52
+"48
 [p x WRT3=OFF ]
-"55
+"51
 [p x WRTC=OFF ]
-"56
+"52
 [p x WRTB=OFF ]
-"57
+"53
 [p x WRTD=OFF ]
-"60
+"56
 [p x EBTR0=OFF ]
-"61
+"57
 [p x EBTR1=OFF ]
-"62
+"58
 [p x EBTR2=OFF ]
-"63
+"59
 [p x EBTR3=OFF ]
-"66
+"62
 [p x EBTRB=OFF ]
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdlib.h: 7: typedef unsigned short wchar_t;
@@ -3743,7 +3743,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;string.h: 58: extern char * strichr(const char *, int);
 [; ;string.h: 59: extern char * strrchr(const char *, int);
 [; ;string.h: 60: extern char * strrichr(const char *, int);
-[; ;Calculadora.c: 9: void display_float(double);
+[; ;Calculadora.c: 9: void display_decimales(double);
 [v $root$_main `(v ~T0 @X0 0 e ]
 "11 Calculadora.c
 [v _main `(i ~T0 @X0 1 ef ]
@@ -3754,193 +3754,190 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _main ]
 [f ]
 "14
-[v _index `ui ~T0 @X0 1 a ]
-[; ;Calculadora.c: 14: unsigned int index=0;
-[e = _index -> -> 0 `i `ui ]
+[v _n_array `ui ~T0 @X0 1 a ]
+[; ;Calculadora.c: 14: unsigned int n_array=0;
+[e = _n_array -> -> 0 `i `ui ]
 "15
-[v _number1 `ul ~T0 @X0 1 a ]
-[v _number2 `ul ~T0 @X0 1 a ]
+[v _num1 `ul ~T0 @X0 1 a ]
+[v _num2 `ul ~T0 @X0 1 a ]
 "16
-[v _result `ul ~T0 @X0 1 a ]
-[; ;Calculadora.c: 15: unsigned long number1,number2;
-[; ;Calculadora.c: 16: unsigned long result=0;
-[e = _result -> -> -> 0 `i `l `ul ]
+[v _resultado `ul ~T0 @X0 1 a ]
+[; ;Calculadora.c: 15: unsigned long num1,num2;
+[; ;Calculadora.c: 16: unsigned long resultado=0;
+[e = _resultado -> -> -> 0 `i `l `ul ]
 "17
-[v _div_result `d ~T0 @X0 1 a ]
-[; ;Calculadora.c: 17: double div_result=0;
-[e = _div_result -> -> 0 `i `d ]
+[v _div_res `d ~T0 @X0 1 a ]
+[; ;Calculadora.c: 17: double div_res=0;
+[e = _div_res -> -> 0 `i `d ]
 "18
-[v _key_pressed `uc ~T0 @X0 1 a ]
-[v _operator `uc ~T0 @X0 1 a ]
+[v _tecla `uc ~T0 @X0 1 a ]
+[v _operador `uc ~T0 @X0 1 a ]
 [v _flag `uc ~T0 @X0 1 a ]
-[; ;Calculadora.c: 18: unsigned char key_pressed,operator,flag=0;
+[; ;Calculadora.c: 18: unsigned char tecla,operador,flag=0;
 [e = _flag -> -> 0 `i `uc ]
-"19
+"20
 [v _op1 `uc ~T0 @X0 -> 10 `i a ]
 [v _op2 `uc ~T0 @X0 -> 10 `i a ]
-"20
-[v _result_output `uc ~T0 @X0 -> 10 `i a ]
-[; ;Calculadora.c: 19: unsigned char op1[10],op2[10];
-[; ;Calculadora.c: 20: unsigned char result_output[10];
-[; ;Calculadora.c: 25: OSCCON = 0x72;
-"25
-[e = _OSCCON -> -> 114 `i `uc ]
-[; ;Calculadora.c: 26: RBPU=0;
+"21
+[v _res_lcd `uc ~T0 @X0 -> 10 `i a ]
+[; ;Calculadora.c: 20: unsigned char op1[10],op2[10];
+[; ;Calculadora.c: 21: unsigned char res_lcd[10];
+[; ;Calculadora.c: 26: OSCCON = 0x72;
 "26
-[e = _RBPU -> -> 0 `i `b ]
-[; ;Calculadora.c: 27: LCD_Init();
+[e = _OSCCON -> -> 114 `i `uc ]
+[; ;Calculadora.c: 27: RBPU=0;
 "27
+[e = _RBPU -> -> 0 `i `b ]
+[; ;Calculadora.c: 28: LCD_Init();
+"28
 [e ( _LCD_Init ..  ]
-[; ;Calculadora.c: 30: LCD_String_xy(1,0,"Calculadora");
-"30
-[e ( _LCD_String_xy (3 , , -> -> 1 `i `uc -> -> 0 `i `uc :s 1C ]
-[; ;Calculadora.c: 31: LCD_String_xy(2,0,"+,-,*,/");
+[; ;Calculadora.c: 31: LCD_String_xy(1,0,"Calculadora");
 "31
-[e ( _LCD_String_xy (3 , , -> -> 2 `i `uc -> -> 0 `i `uc :s 2C ]
-[; ;Calculadora.c: 32: MSdelay(1000);
+[e ( _LCD_String_xy (3 , , -> -> 1 `i `uc -> -> 0 `i `uc :s 1C ]
+[; ;Calculadora.c: 32: LCD_String_xy(2,0,"+,-,*,/");
 "32
-[e ( _MSdelay (1 -> -> 1000 `i `ui ]
-[; ;Calculadora.c: 33: LCD_Clear();
+[e ( _LCD_String_xy (3 , , -> -> 2 `i `uc -> -> 0 `i `uc :s 2C ]
+[; ;Calculadora.c: 33: MSdelay(1000);
 "33
-[e ( _LCD_Clear ..  ]
-[; ;Calculadora.c: 34: LCD_Command(0x80);
+[e ( _MSdelay (1 -> -> 1000 `i `ui ]
+[; ;Calculadora.c: 34: LCD_Clear();
 "34
-[e ( _LCD_Command (1 -> -> 128 `i `uc ]
-[; ;Calculadora.c: 35: while(1){
-"35
+[e ( _LCD_Clear ..  ]
+[; ;Calculadora.c: 36: while(1){
+"36
 [e :U 368 ]
 {
-[; ;Calculadora.c: 38: key_pressed= keyfind();
-"38
-[e = _key_pressed ( _keyfind ..  ]
-[; ;Calculadora.c: 39: MSdelay(30);
+[; ;Calculadora.c: 39: tecla= keyfind();
 "39
-[e ( _MSdelay (1 -> -> 30 `i `ui ]
-[; ;Calculadora.c: 40: if(key_pressed!=' '){
+[e = _tecla ( _keyfind ..  ]
+[; ;Calculadora.c: 40: MSdelay(30);
 "40
-[e $ ! != -> _key_pressed `ui -> 32 `ui 370  ]
+[e ( _MSdelay (1 -> -> 30 `i `ui ]
+[; ;Calculadora.c: 41: if(tecla!=' '){
+"41
+[e $ ! != -> _tecla `ui -> 32 `ui 370  ]
 {
-[; ;Calculadora.c: 44: if(key_pressed!='+' && key_pressed!='-' && key_pressed!='/' && key_pressed!='*' && key_pressed!='='){
-"44
-[e $ ! && && && && != -> _key_pressed `ui -> 43 `ui != -> _key_pressed `ui -> 45 `ui != -> _key_pressed `ui -> 47 `ui != -> _key_pressed `ui -> 42 `ui != -> _key_pressed `ui -> 61 `ui 371  ]
+[; ;Calculadora.c: 45: if(tecla!='+' && tecla!='-' && tecla!='/' && tecla!='*' && tecla!='='){
+"45
+[e $ ! && && && && != -> _tecla `ui -> 43 `ui != -> _tecla `ui -> 45 `ui != -> _tecla `ui -> 47 `ui != -> _tecla `ui -> 42 `ui != -> _tecla `ui -> 61 `ui 371  ]
 {
-[; ;Calculadora.c: 46: if(flag==0){
-"46
+[; ;Calculadora.c: 47: if(flag==0){
+"47
 [e $ ! == -> _flag `i -> 0 `i 372  ]
 {
-[; ;Calculadora.c: 48: op1[index] = key_pressed;
-"48
-[e = *U + &U _op1 * -> _index `ux -> -> # *U &U _op1 `ui `ux _key_pressed ]
-[; ;Calculadora.c: 49: index++;
+[; ;Calculadora.c: 49: op1[n_array] = tecla;
 "49
-[e ++ _index -> -> 1 `i `ui ]
+[e = *U + &U _op1 * -> _n_array `ux -> -> # *U &U _op1 `ui `ux _tecla ]
+[; ;Calculadora.c: 50: n_array++;
 "50
-}
-[; ;Calculadora.c: 50: }
-[e $U 373  ]
+[e ++ _n_array -> -> 1 `i `ui ]
 "51
-[e :U 372 ]
-[; ;Calculadora.c: 51: else{
-{
-[; ;Calculadora.c: 52: op2[index] = key_pressed;
-"52
-[e = *U + &U _op2 * -> _index `ux -> -> # *U &U _op2 `ui `ux _key_pressed ]
-[; ;Calculadora.c: 53: index++;
-"53
-[e ++ _index -> -> 1 `i `ui ]
-"54
 }
-[e :U 373 ]
+[; ;Calculadora.c: 51: }
+[e $U 373  ]
+"52
+[e :U 372 ]
+[; ;Calculadora.c: 52: else{
+{
+[; ;Calculadora.c: 53: op2[n_array] = tecla;
+"53
+[e = *U + &U _op2 * -> _n_array `ux -> -> # *U &U _op2 `ui `ux _tecla ]
+[; ;Calculadora.c: 54: n_array++;
+"54
+[e ++ _n_array -> -> 1 `i `ui ]
 "55
 }
+[e :U 373 ]
+"56
+}
 [e :U 371 ]
-[; ;Calculadora.c: 54: }
 [; ;Calculadora.c: 55: }
-[; ;Calculadora.c: 57: if(key_pressed=='+' || key_pressed=='-' || key_pressed=='*' || key_pressed=='/' ){
-"57
-[e $ ! || || || == -> _key_pressed `ui -> 43 `ui == -> _key_pressed `ui -> 45 `ui == -> _key_pressed `ui -> 42 `ui == -> _key_pressed `ui -> 47 `ui 374  ]
+[; ;Calculadora.c: 56: }
+[; ;Calculadora.c: 58: if(tecla=='+' || tecla=='-' || tecla=='*' || tecla=='/' ){
+"58
+[e $ ! || || || == -> _tecla `ui -> 43 `ui == -> _tecla `ui -> 45 `ui == -> _tecla `ui -> 42 `ui == -> _tecla `ui -> 47 `ui 374  ]
 {
-[; ;Calculadora.c: 59: operator=key_pressed;
-"59
-[e = _operator _key_pressed ]
-[; ;Calculadora.c: 60: index=0;
+[; ;Calculadora.c: 60: operador=tecla;
 "60
-[e = _index -> -> 0 `i `ui ]
-[; ;Calculadora.c: 61: flag=1;
+[e = _operador _tecla ]
+[; ;Calculadora.c: 61: n_array=0;
 "61
+[e = _n_array -> -> 0 `i `ui ]
+[; ;Calculadora.c: 62: flag=1;
+"62
 [e = _flag -> -> 1 `i `uc ]
-"63
+"64
 }
 [e :U 374 ]
-[; ;Calculadora.c: 63: }
-[; ;Calculadora.c: 66: if(key_pressed=='='){
-"66
-[e $ ! == -> _key_pressed `ui -> 61 `ui 375  ]
+[; ;Calculadora.c: 64: }
+[; ;Calculadora.c: 67: if(tecla=='='){
+"67
+[e $ ! == -> _tecla `ui -> 61 `ui 375  ]
 {
-[; ;Calculadora.c: 68: number1=atol(op1);
-"68
-[e = _number1 -> ( _atol (1 -> &U _op1 `*Cuc `ul ]
-[; ;Calculadora.c: 69: number2=atol(op2);
+[; ;Calculadora.c: 69: num1=atol(op1);
 "69
-[e = _number2 -> ( _atol (1 -> &U _op2 `*Cuc `ul ]
-[; ;Calculadora.c: 70: LCD_Command(0xc0);
+[e = _num1 -> ( _atol (1 -> &U _op1 `*Cuc `ul ]
+[; ;Calculadora.c: 70: num2=atol(op2);
 "70
+[e = _num2 -> ( _atol (1 -> &U _op2 `*Cuc `ul ]
+[; ;Calculadora.c: 71: LCD_Command(0xc0);
+"71
 [e ( _LCD_Command (1 -> -> 192 `i `uc ]
-[; ;Calculadora.c: 73: switch(operator){
-"73
+[; ;Calculadora.c: 74: switch(operador){
+"74
 [e $U 377  ]
 {
-[; ;Calculadora.c: 75: case '+':
-"75
+[; ;Calculadora.c: 76: case '+':
+"76
 [e :U 378 ]
-[; ;Calculadora.c: 78: result = number1+number2;
-"78
-[e = _result + _number1 _number2 ]
-[; ;Calculadora.c: 79: ltoa(result_output,result,10);
+[; ;Calculadora.c: 79: resultado = num1+num2;
 "79
-[e ( _ltoa (3 , , &U _result_output -> _result `l -> 10 `i ]
-[; ;Calculadora.c: 81: LCD_String(result_output);
+[e = _resultado + _num1 _num2 ]
+[; ;Calculadora.c: 80: ltoa(res_lcd,resultado,10);
+"80
+[e ( _ltoa (3 , , &U _res_lcd -> _resultado `l -> 10 `i ]
+[; ;Calculadora.c: 81: LCD_String(res_lcd);
 "81
-[e ( _LCD_String (1 -> &U _result_output `*Cuc ]
+[e ( _LCD_String (1 -> &U _res_lcd `*Cuc ]
 [; ;Calculadora.c: 82: break;
 "82
 [e $U 376  ]
 [; ;Calculadora.c: 85: case '-':
 "85
 [e :U 379 ]
-[; ;Calculadora.c: 87: result = number1-number2;
+[; ;Calculadora.c: 87: resultado = num1-num2;
 "87
-[e = _result - _number1 _number2 ]
-[; ;Calculadora.c: 88: ltoa(result_output,result,10);
+[e = _resultado - _num1 _num2 ]
+[; ;Calculadora.c: 88: ltoa(res_lcd,resultado,10);
 "88
-[e ( _ltoa (3 , , &U _result_output -> _result `l -> 10 `i ]
-[; ;Calculadora.c: 89: LCD_String(result_output);
+[e ( _ltoa (3 , , &U _res_lcd -> _resultado `l -> 10 `i ]
+[; ;Calculadora.c: 89: LCD_String(res_lcd);
 "89
-[e ( _LCD_String (1 -> &U _result_output `*Cuc ]
+[e ( _LCD_String (1 -> &U _res_lcd `*Cuc ]
 [; ;Calculadora.c: 90: break;
 "90
 [e $U 376  ]
 [; ;Calculadora.c: 93: case '*':
 "93
 [e :U 380 ]
-[; ;Calculadora.c: 95: result = number1*number2;
+[; ;Calculadora.c: 95: resultado = num1*num2;
 "95
-[e = _result * _number1 _number2 ]
-[; ;Calculadora.c: 96: ltoa(result_output,result,10);
+[e = _resultado * _num1 _num2 ]
+[; ;Calculadora.c: 96: ltoa(res_lcd,resultado,10);
 "96
-[e ( _ltoa (3 , , &U _result_output -> _result `l -> 10 `i ]
-[; ;Calculadora.c: 97: LCD_String(result_output);
+[e ( _ltoa (3 , , &U _res_lcd -> _resultado `l -> 10 `i ]
+[; ;Calculadora.c: 97: LCD_String(res_lcd);
 "97
-[e ( _LCD_String (1 -> &U _result_output `*Cuc ]
+[e ( _LCD_String (1 -> &U _res_lcd `*Cuc ]
 [; ;Calculadora.c: 98: break;
 "98
 [e $U 376  ]
 [; ;Calculadora.c: 101: case '/':
 "101
 [e :U 381 ]
-[; ;Calculadora.c: 103: if(number2==0){
+[; ;Calculadora.c: 103: if(num2==0){
 "103
-[e $ ! == _number2 -> -> -> 0 `i `l `ul 382  ]
+[e $ ! == _num2 -> -> -> 0 `i `l `ul 382  ]
 {
 [; ;Calculadora.c: 105: LCD_Clear();
 "105
@@ -3956,12 +3953,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 382 ]
 [; ;Calculadora.c: 108: else{
 {
-[; ;Calculadora.c: 110: div_result = (float)number1/(float)number2;
+[; ;Calculadora.c: 110: div_res = (float)num1/(float)num2;
 "110
-[e = _div_result -> / -> _number1 `f -> _number2 `f `d ]
-[; ;Calculadora.c: 113: display_float(div_result);
+[e = _div_res -> / -> _num1 `f -> _num2 `f `d ]
+[; ;Calculadora.c: 113: display_decimales(div_res);
 "113
-[e ( _display_float (1 _div_result ]
+[e ( _display_decimales (1 _div_res ]
 "115
 }
 [e :U 383 ]
@@ -3979,154 +3976,154 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [; ;Calculadora.c: 121: }
 [e $U 376  ]
-"73
+"74
 [e :U 377 ]
-[e [\ _operator , $ -> -> 43 `ui `uc 378
+[e [\ _operador , $ -> -> 43 `ui `uc 378
  , $ -> -> 45 `ui `uc 379
  , $ -> -> 42 `ui `uc 380
  , $ -> -> 47 `ui `uc 381
  384 ]
 "121
 [e :U 376 ]
-"126
+"123
 }
 [e :U 375 ]
-"129
+"126
 }
+[; ;Calculadora.c: 123: }
 [; ;Calculadora.c: 126: }
-[; ;Calculadora.c: 129: }
 [e $U 385  ]
-"130
+"127
 [e :U 370 ]
-[; ;Calculadora.c: 130: else{
+[; ;Calculadora.c: 127: else{
 {
-[; ;Calculadora.c: 132: LCD_Clear();
-"132
+[; ;Calculadora.c: 129: LCD_Clear();
+"129
 [e ( _LCD_Clear ..  ]
-[; ;Calculadora.c: 133: MSdelay(10);
-"133
+[; ;Calculadora.c: 130: MSdelay(10);
+"130
 [e ( _MSdelay (1 -> -> 10 `i `ui ]
-[; ;Calculadora.c: 135: memset(op1,0,10);
-"135
+[; ;Calculadora.c: 132: memset(op1,0,10);
+"132
 [e ( _memset (3 , , -> &U _op1 `*v -> 0 `i -> -> 10 `i `ui ]
-[; ;Calculadora.c: 136: memset(op2,0,10);
-"136
+[; ;Calculadora.c: 133: memset(op2,0,10);
+"133
 [e ( _memset (3 , , -> &U _op2 `*v -> 0 `i -> -> 10 `i `ui ]
-[; ;Calculadora.c: 137: memset(result_output,0,10);
-"137
-[e ( _memset (3 , , -> &U _result_output `*v -> 0 `i -> -> 10 `i `ui ]
-[; ;Calculadora.c: 138: break;
-"138
+[; ;Calculadora.c: 134: memset(res_lcd,0,10);
+"134
+[e ( _memset (3 , , -> &U _res_lcd `*v -> 0 `i -> -> 10 `i `ui ]
+[; ;Calculadora.c: 135: break;
+"135
 [e $U 369  ]
-"139
+"136
 }
 [e :U 385 ]
-[; ;Calculadora.c: 139: }
-[; ;Calculadora.c: 141: MSdelay(1);
-"141
+[; ;Calculadora.c: 136: }
+[; ;Calculadora.c: 138: MSdelay(1);
+"138
 [e ( _MSdelay (1 -> -> 1 `i `ui ]
-"142
+"139
 }
 [e :U 367 ]
-"35
+"36
 [e $U 368  ]
 [e :U 369 ]
-[; ;Calculadora.c: 142: }
-[; ;Calculadora.c: 143: return 0;
-"143
+[; ;Calculadora.c: 139: }
+[; ;Calculadora.c: 140: return 0;
+"140
 [e ) -> 0 `i ]
 [e $UE 366  ]
-[; ;Calculadora.c: 144: }
-"144
+[; ;Calculadora.c: 141: }
+"141
 [e :UE 366 ]
 }
-"146
-[v _display_float `(v ~T0 @X0 1 ef1`d ]
-"147
+"143
+[v _display_decimales `(v ~T0 @X0 1 ef1`d ]
+"144
 {
-[; ;Calculadora.c: 146: void display_float(double div_result)
-[; ;Calculadora.c: 147: {
-[e :U _display_float ]
-"146
-[v _div_result `d ~T0 @X0 1 r1 ]
-"147
+[; ;Calculadora.c: 143: void display_decimales(double div_res)
+[; ;Calculadora.c: 144: {
+[e :U _display_decimales ]
+"143
+[v _div_res `d ~T0 @X0 1 r1 ]
+"144
 [f ]
-"148
+"145
 [v _temp `f ~T0 @X0 1 a ]
+"146
+[v _salida `uc ~T0 @X0 -> 15 `i a ]
+[v _salida1 `uc ~T0 @X0 -> 15 `i a ]
+[; ;Calculadora.c: 145: float temp;
+[; ;Calculadora.c: 146: unsigned char salida[15],salida1[15];
+[; ;Calculadora.c: 147: itoa(salida,(int)div_res,10);
+"147
+[e ( _itoa (3 , , &U _salida -> _div_res `i -> 10 `i ]
+[; ;Calculadora.c: 148: LCD_String(salida);
+"148
+[e ( _LCD_String (1 -> &U _salida `*Cuc ]
+[; ;Calculadora.c: 149: LCD_String(".");
 "149
-[v _output `uc ~T0 @X0 -> 15 `i a ]
-[v _output1 `uc ~T0 @X0 -> 15 `i a ]
-[; ;Calculadora.c: 148: float temp;
-[; ;Calculadora.c: 149: unsigned char output[15],output1[15];
-[; ;Calculadora.c: 150: temp=div_result - ((int)div_result);
-"150
-[e = _temp -> - _div_result -> -> _div_result `i `d `f ]
-[; ;Calculadora.c: 151: temp=10*temp;
-"151
-[e = _temp * -> -> 10 `i `f _temp ]
-[; ;Calculadora.c: 152: itoa(output,(int)div_result,10);
-"152
-[e ( _itoa (3 , , &U _output -> _div_result `i -> 10 `i ]
-[; ;Calculadora.c: 153: LCD_String(output);
-"153
-[e ( _LCD_String (1 -> &U _output `*Cuc ]
-[; ;Calculadora.c: 154: LCD_String(".");
-"154
 [e ( _LCD_String (1 :s 4C ]
-[; ;Calculadora.c: 155: itoa(output1,(int)temp,10);
-"155
-[e ( _itoa (3 , , &U _output1 -> _temp `i -> 10 `i ]
-[; ;Calculadora.c: 156: LCD_String(output1);
-"156
-[e ( _LCD_String (1 -> &U _output1 `*Cuc ]
+[; ;Calculadora.c: 151: temp=div_res - ((int)div_res);
+"151
+[e = _temp -> - _div_res -> -> _div_res `i `d `f ]
+[; ;Calculadora.c: 152: temp=10*temp;
+"152
+[e = _temp * -> -> 10 `i `f _temp ]
+[; ;Calculadora.c: 153: itoa(salida1,(int)temp,10);
+"153
+[e ( _itoa (3 , , &U _salida1 -> _temp `i -> 10 `i ]
+[; ;Calculadora.c: 154: LCD_String(salida1);
+"154
+[e ( _LCD_String (1 -> &U _salida1 `*Cuc ]
 [; ;Calculadora.c: 158: temp= temp - ((int)temp);
 "158
 [e = _temp - _temp -> -> _temp `i `f ]
 [; ;Calculadora.c: 159: temp=10*temp;
 "159
 [e = _temp * -> -> 10 `i `f _temp ]
-[; ;Calculadora.c: 160: itoa(output1,(int)temp,10);
+[; ;Calculadora.c: 160: itoa(salida1,(int)temp,10);
 "160
-[e ( _itoa (3 , , &U _output1 -> _temp `i -> 10 `i ]
-[; ;Calculadora.c: 161: LCD_String(output1);
+[e ( _itoa (3 , , &U _salida1 -> _temp `i -> 10 `i ]
+[; ;Calculadora.c: 161: LCD_String(salida1);
 "161
-[e ( _LCD_String (1 -> &U _output1 `*Cuc ]
+[e ( _LCD_String (1 -> &U _salida1 `*Cuc ]
 [; ;Calculadora.c: 163: temp= temp - ((int)temp);
 "163
 [e = _temp - _temp -> -> _temp `i `f ]
 [; ;Calculadora.c: 164: temp=10*temp;
 "164
 [e = _temp * -> -> 10 `i `f _temp ]
-[; ;Calculadora.c: 165: itoa(output1,(int)temp,10);
+[; ;Calculadora.c: 165: itoa(salida1,(int)temp,10);
 "165
-[e ( _itoa (3 , , &U _output1 -> _temp `i -> 10 `i ]
-[; ;Calculadora.c: 166: LCD_String(output1);
+[e ( _itoa (3 , , &U _salida1 -> _temp `i -> 10 `i ]
+[; ;Calculadora.c: 166: LCD_String(salida1);
 "166
-[e ( _LCD_String (1 -> &U _output1 `*Cuc ]
+[e ( _LCD_String (1 -> &U _salida1 `*Cuc ]
 [; ;Calculadora.c: 168: temp= temp - ((int)temp);
 "168
 [e = _temp - _temp -> -> _temp `i `f ]
 [; ;Calculadora.c: 169: temp=10*temp;
 "169
 [e = _temp * -> -> 10 `i `f _temp ]
-[; ;Calculadora.c: 170: itoa(output1,(int)temp,10);
+[; ;Calculadora.c: 170: itoa(salida1,(int)temp,10);
 "170
-[e ( _itoa (3 , , &U _output1 -> _temp `i -> 10 `i ]
-[; ;Calculadora.c: 171: LCD_String(output1);
+[e ( _itoa (3 , , &U _salida1 -> _temp `i -> 10 `i ]
+[; ;Calculadora.c: 171: LCD_String(salida1);
 "171
-[e ( _LCD_String (1 -> &U _output1 `*Cuc ]
+[e ( _LCD_String (1 -> &U _salida1 `*Cuc ]
 [; ;Calculadora.c: 173: temp= temp - ((int)temp);
 "173
 [e = _temp - _temp -> -> _temp `i `f ]
 [; ;Calculadora.c: 174: temp=10*temp;
 "174
 [e = _temp * -> -> 10 `i `f _temp ]
-[; ;Calculadora.c: 175: itoa(output1,(int)temp,10);
+[; ;Calculadora.c: 175: itoa(salida1,(int)temp,10);
 "175
-[e ( _itoa (3 , , &U _output1 -> _temp `i -> 10 `i ]
-[; ;Calculadora.c: 176: LCD_String(output1);
+[e ( _itoa (3 , , &U _salida1 -> _temp `i -> 10 `i ]
+[; ;Calculadora.c: 176: LCD_String(salida1);
 "176
-[e ( _LCD_String (1 -> &U _output1 `*Cuc ]
+[e ( _LCD_String (1 -> &U _salida1 `*Cuc ]
 [; ;Calculadora.c: 177: }
 "177
 [e :UE 386 ]

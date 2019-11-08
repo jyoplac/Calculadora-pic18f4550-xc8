@@ -3,7 +3,6 @@
 #define	LCD_H
 
 #include <xc.h> 
-//#include "lcd.h"
 
 /*********************Definition of Ports********************************/
 

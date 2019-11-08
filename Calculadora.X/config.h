@@ -1,8 +1,4 @@
 
-// PIC18F4550 Configuration Bit Settings
-
-// 'C' source line config statements
-
 // CONFIG1L
 #pragma config PLLDIV = 1       // PLL Prescaler Selection bits (No prescale (4 MHz oscillator input drives PLL directly))
 #pragma config CPUDIV = OSC1_PLL2// System Clock Postscaler Selection bits ([Primary Oscillator Src: /1][96 MHz PLL Src: /2])
@@ -64,8 +60,5 @@
 
 // CONFIG7H
 #pragma config EBTRB = OFF      // Boot Block Table Read Protection bit (Boot block (000000-0007FFh) is not protected from table reads executed in other blocks)
-
-// #pragma config statements should precede project file includes.
-// Use project enums instead of #define for ON and OFF.
 
 #include <xc.h>

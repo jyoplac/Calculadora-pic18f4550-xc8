@@ -5573,7 +5573,7 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 17 "lcd.h"
+# 16 "lcd.h"
 void MSdelay(unsigned int );
 void LCD_Init();
 void LCD_Command(unsigned char );
@@ -5592,11 +5592,13 @@ unsigned char keypad[4][4]= {'1','2','3','+',
 unsigned char keyfind();
 
 # 4 "teclado.c"
-unsigned char keyfind()
-{
+unsigned char keyfind(){
+
 TRISB = 0xf0;
 LATB = 0xf0;
+
 do{
+
 do{
 col_loc = PORTB & 0xf0;
 }while(col_loc!=0xf0);
@@ -5606,20 +5608,20 @@ col_loc = PORTB & 0xf0;
 }while(col_loc!=0xf0);
 
 LATB = 0xf0;
-do
-{ do
-{
+
+do{
+do{
 col_loc = PORTB & 0xf0;
 }while(col_loc==0xf0);
 col_loc = PORTB & 0xf0;
+
 }while(col_loc==0xf0);
 
 MSdelay(20);
 
 col_loc = PORTB & 0xf0;
 
-while(1)
-{
+while(1){
 LATB = 0xfe;
 col_loc = PORTB & 0xf0;
 temp_col=col_loc;
@@ -5676,8 +5678,7 @@ break;
 
 
 
-while(1)
-{
+while(1){
 
 if(col_loc==0xe0)
 {
@@ -5712,7 +5713,7 @@ return keypad[rowloc][3];
 }
 }
 
-MSdelay(300);
+MSdelay(200);
 return 0;
 }
 

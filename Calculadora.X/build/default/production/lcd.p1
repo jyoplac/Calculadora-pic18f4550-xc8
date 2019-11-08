@@ -1,9 +1,9 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "4001 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"17 lcd.h
+"16 lcd.h
 [v _MSdelay `(v ~T0 @X0 0 ef1`ui ]
-"19
+"18
 [v _LCD_Command `(v ~T0 @X0 0 ef1`uc ]
 "3263 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [v _LATD `Vuc ~T0 @X0 0 e@3980 ]
@@ -3524,13 +3524,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 187: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 189: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 191: extern __nonreentrant void _delay3(unsigned char);
-[; ;lcd.h: 17: void MSdelay(unsigned int );
-[; ;lcd.h: 18: void LCD_Init();
-[; ;lcd.h: 19: void LCD_Command(unsigned char );
-[; ;lcd.h: 20: void LCD_Char(unsigned char x);
-[; ;lcd.h: 21: void LCD_String(const char *);
-[; ;lcd.h: 22: void LCD_String_xy(char, char , const char *);
-[; ;lcd.h: 23: void LCD_Clear();
+[; ;lcd.h: 16: void MSdelay(unsigned int );
+[; ;lcd.h: 17: void LCD_Init();
+[; ;lcd.h: 18: void LCD_Command(unsigned char );
+[; ;lcd.h: 19: void LCD_Char(unsigned char x);
+[; ;lcd.h: 20: void LCD_String(const char *);
+[; ;lcd.h: 21: void LCD_String_xy(char, char , const char *);
+[; ;lcd.h: 22: void LCD_Clear();
 "4 lcd.c
 [v _LCD_Init `(v ~T0 @X0 1 ef ]
 "5
